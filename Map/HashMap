@@ -1,0 +1,31 @@
+package com.dicoding.javafundamental.collection;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class HashMapIdentitasPeserta {
+    public static void main(String[] args) {
+        //Implementasi Map menggunakan HashMap
+        Map<String,IdentitasPeserta > identitas = new HashMap();
+        //put() untuk menambahkan data ke identitas peserta
+        identitas.put("ID-01", new IdentitasPeserta("Ananta", 17));
+        identitas.put("ID-02", new IdentitasPeserta("Nizam", 19));
+        identitas.put("ID-03", new IdentitasPeserta("Dwika", 17));
+        identitas.put("ID-04", new IdentitasPeserta("Alfin", 18));
+        identitas.put("ID-05", new IdentitasPeserta("Arta", 18));
+
+        //size() untuk mendapatkan jumlah data yang tersimpan di identitas
+        System.out.println("Map identitas I: (size = "+ identitas.size() +")");
+        for (String key : identitas.keySet()) {
+            //get() untuk melihat isi map berdasarkan key
+            System.out.println("\t " + key + " : " + identitas.get(key));
+        }
+        //remove() untuk menghapus data dari identitas peserta
+        identitas.remove("ID-03");
+
+        System.out.println("\n Map identitas II: (size = "+ identitas.size() +")");
+        for (String key : identitas.keySet()) {
+            System.out.println("\t " + key + " : " + identitas.get(key));
+        }
+    }
+}
