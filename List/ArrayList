@@ -1,1 +1,36 @@
+package com.dicoding.javafundamental.collection;
 
+import java.util.ArrayList;
+import java.util.List;
+
+public class ListOlahraga {
+    public static void main(String[] args) {
+        //Implementasi List menggunakan ArrayList
+        List<String> olahraga = new ArrayList<>();
+        //add() untuk menambahkan data ke olahraga
+        olahraga.add("sepak bola");
+        olahraga.add("basket");
+        olahraga.add("bulutangkis");
+        olahraga.add("voli");
+        olahraga.add("sepak takraw");
+        olahraga.add("panahan");
+        olahraga.add("renang");
+
+        System.out.println("List olahraga I:");
+        //size() untuk mendapatkan jumlah data yang tersimpan di list olahraga
+        for (int j = 0; j < olahraga.size(); j++) {
+            //get() untuk bisa melihat isi list pada indeks ke-j
+            System.out.println("\t Indeks ke-"+ j +" = " + olahraga.get(j));
+        }
+
+        //remove() untuk menghapus data dari list olahraga
+        olahraga.remove(3);
+        olahraga.remove(5);
+
+        //melihat list olahraga setelah menghapus beberapa data
+        System.out.println("\n List olahraga II:");
+        for (int j = 0; j < olahraga.size(); j++) {
+            System.out.println("\t Indeks ke-"+ j +" = " + olahraga.get(j));
+        }
+    }
+}
