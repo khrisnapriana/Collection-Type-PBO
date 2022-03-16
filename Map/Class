@@ -1,0 +1,14 @@
+package com.dicoding.javafundamental.collection;
+
+class IdentitasPeserta {
+    private String nama;
+    private Integer umur;
+    public IdentitasPeserta(String nama, Integer umur) {
+        this.nama = nama;
+        this.umur = umur;
+    }
+    @Override
+    public String toString() {
+        return " " + nama + ", umur: " + umur;
+    }
+}
