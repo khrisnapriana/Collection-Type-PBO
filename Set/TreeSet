@@ -1,0 +1,35 @@
+package com.dicoding.javafundamental.collection;
+
+import java.util.Iterator;
+import java.util.TreeSet;
+import java.util.Set;
+
+public class TreeSetTeleponPeserta {
+    public static void main(String[] args) {
+        //Implementasi Set menggunakan LinkedHashSet
+        Set<String> notelp = new TreeSet<>();
+        //add() untuk menambahkan data ke notelp
+        notelp.add("081337419772");
+        notelp.add("089113400515");
+        notelp.add("087319464842");
+        notelp.add("085126777905");
+        notelp.add("081229600708");
+
+        //size() untuk mendapatkan jumlah data yang tersimpan di notelp
+        System.out.println("Set notelp I: (size = " + notelp.size() + ")");
+        for (String telp : notelp) {
+            System.out.println("\t -" + telp);
+        }
+
+        //remove() untuk menghapus data dari notelp
+        notelp.remove("081337419772");
+        //add() untuk coba menambah data yang sama ke notelp
+        notelp.add("081229600708");
+
+        System.out.println("\n Set notelp II: (size = " + notelp.size() + ")");
+        for (Iterator iterator = notelp.iterator(); iterator.hasNext(); ) {
+            //looping menggunakan Iterator
+            System.out.println("\t -" + iterator.next());
+        }
+    }
+}
